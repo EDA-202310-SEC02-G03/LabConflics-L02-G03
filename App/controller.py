@@ -77,7 +77,8 @@ def loadBooksTags(control, filename):
     """
     Cargo los tags de los libros del archivo
     """
-    booktagfile= os.path.join(cf,data_dir,filename)
+    # TODO: Mods de Est-1 y Est-2, Est-3 en el Lab 2
+    booktagfile = os.path.join(cf.data_dir, filename)
     catalog = control["model"]
     input_file = csv.DictReader(open(booktagfile, encoding="utf-8"))
     catalog = model.createBookTagList(catalog)
